@@ -4,14 +4,14 @@
 sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
 
 # 编辑默认的主题
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # 编辑默认的luci显示的固件名称
-#sed -i 's/OpenWrt/ZWRT/g' package/base-files/files/bin/config_generate
+sed -i 's/LEDE/OpenWrt/g' package/base-files/files/bin/config_generate
 #sed -i 's/ImmortalWrt/ZWRT/g' package/base-files/files/bin/config_generate
 
 # 添加额外的软件包，echo 方式和git clone 方式二选一即可
-echo 'src-git smpackage https://github.com/kenzok8/small-package' >>feeds.conf.default
+#echo 'src-git smpackage https://github.com/kenzok8/small-package' >>feeds.conf.default
 #echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 #echo 'src-git UA3F https://github.com/SunBK201/UA3F.git' >>feeds.conf.default
 #git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
