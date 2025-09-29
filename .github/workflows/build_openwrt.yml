@@ -81,6 +81,10 @@ jobs:
           echo "=============================================================================="
           df -hT
           echo "=============================================================================="
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.50'
 
       - name: 下载编译所需的依赖 (Install the software packages required for compilation)
         run: |
